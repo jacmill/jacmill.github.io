@@ -1,10 +1,10 @@
 ---
 export interface Props {
     name: String,
-    link: string | URL
+    to: string | URL
 }
 
-const { name, link } = Astro.props as Props; 
+const { name, to } = Astro.props as Props; 
 ---
 
-<a href={link}> {name} </a>
+<a href={to}> {name} </a>

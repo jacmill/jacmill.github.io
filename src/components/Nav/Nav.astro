@@ -1,18 +1,6 @@
 ---
 import NavLink from "./NavLink.astro";
-export interface Props {
-    links: Map<string, string>
-}
-
-const { links } = Astro.props as Props;
 ---
 <nav>
-    {links.forEach((value, key) => (
-        <>
-            <NavLink
-                name={value}
-                link={value}
-            />
-        </>
-    ))}
+    <NavLink to="/experiments" name="Experiments"/>
 </nav>
