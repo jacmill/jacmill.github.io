@@ -1,5 +1,9 @@
 ---
+import Nav from "../components/Nav/Nav.astro";
 
+const links = new Map([
+    ["Experiments", "/experiments"],
+])
 ---
 <html>
     <head>
@@ -8,6 +12,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <Nav
+            links={ links }
+        />
         <main>
             <h1>WEBSITE</h1>
         </main>
