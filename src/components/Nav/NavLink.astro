@@ -7,4 +7,10 @@ export interface Props {
 const { name, to } = Astro.props as Props; 
 ---
 
-<a href={to}> {name} </a>
+<a href={to} class="nav--link"> {name} </a>
+<style lang="scss">
+    .nav--link {
+        text-decoration: none;
+        color: black;
+    }
+</style>

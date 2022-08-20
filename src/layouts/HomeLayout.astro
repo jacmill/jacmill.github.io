@@ -12,17 +12,24 @@ const links = new Map([
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+    <div class="outer">
         <Nav
             links={ links }
         />
         <main>
             <h1>WEBSITE</h1>
         </main>
+    </div>
     </body>
 </html>
 
-<style>
+<style lang="scss">
     * {
         font-family: sans-serif;
+    }
+    .outer {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 50%;
     }
 </style>
