@@ -1,9 +1,5 @@
 ---
 import Nav from "../components/Nav/Nav.astro";
-
-const links = new Map([
-    ["Experiments", "/experiments"],
-])
 ---
 <html>
     <head>
@@ -13,11 +9,11 @@ const links = new Map([
     </head>
     <body>
     <div class="outer">
-        <Nav
-            links={ links }
-        />
+        <header class="header">
+            <Nav />
+        </header>
         <main>
-            <h1>WEBSITE</h1>
+            <slot />
         </main>
     </div>
     </body>
@@ -30,6 +26,12 @@ const links = new Map([
     .outer {
         display: grid;
         justify-content: center;
-        grid-template-columns: 50%;
+        grid-template-areas: 
+            "header"
+
+        ;
+    }
+    .header {
+        grid-area: header;
     }
 </style>
