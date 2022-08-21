@@ -4,4 +4,13 @@ import NavLink from "./NavLink.astro";
 <nav class="nav">
     <NavLink to="/experiments" name="Experiments"/>
     <NavLink to="#" name="Time travel"/>
+    <NavLink to="/blog" name="Blog"/>
 </nav>
+
+<style lang="scss">
+    .nav {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+    }
+</style>
