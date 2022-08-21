@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import PostsPreview from "@components/Blog/PostsPreview.astro";
 ---
 <BaseLayout>
 	<section>
@@ -9,5 +10,9 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 			Welcome to my personal void where I'll share my discoveries.
 			Fan of linux, web development and gym enthusiast
 		</p>
+	</section>
+	<section>
+		<h2>Posts</h2>
+		<PostsPreview />
 	</section>
 </BaseLayout>
