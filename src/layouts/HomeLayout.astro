@@ -12,7 +12,7 @@ import Nav from "../components/Nav/Nav.astro";
         <header class="header">
             <Nav />
         </header>
-        <main>
+        <main class="main">
             <slot />
         </main>
     </div>
@@ -28,10 +28,13 @@ import Nav from "../components/Nav/Nav.astro";
         justify-content: center;
         grid-template-areas: 
             "header"
-
+            "main"
         ;
     }
     .header {
         grid-area: header;
+    }
+    .main {
+        grid-area: main;
     }
 </style>
