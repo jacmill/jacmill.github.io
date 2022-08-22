@@ -12,10 +12,23 @@ import PostsPreview from "@components/Blog/PostsPreview.astro";
 		</p>
 	</section>
 	<section>
-		<h2>Posts</h2>
+		<div class="section__heading">
+			<h2>Posts</h2>
+			<a href="/blog">See more...</a>
+		</div>
 		<PostsPreview amount="3"/>
 	</section>
 	<section>
-		<h2>Projects</h2>
+		<div class="section__heading">
+			<h2>Projects</h2>
+			<a href="/blog">See more...</a>
+		</div>
 	</section>
 </BaseLayout>
+<style lang="scss">
+	.section__heading {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+</style>

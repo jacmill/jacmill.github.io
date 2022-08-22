@@ -38,4 +38,9 @@ import Nav from "../components/Nav/Nav.astro";
     .main {
         grid-area: main;
     }
+    @media only screen and (max-width: 900px) {
+        .outer {
+            grid-template-columns: 90%;
+        }
+    }
 </style>
