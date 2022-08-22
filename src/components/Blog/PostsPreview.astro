@@ -1,16 +1,27 @@
 ---
+export interface Props {
+    amount?: number | string
+};
+
+const { amount = "all"} = Astro.props;
+
 let posts = [];
 let hasPosts = true;
+
 try {
     posts = await Astro.glob("../../pages/blog/*.md");
 } catch (error) {
     hasPosts = false;
 }
+
+if(amount !== "all" && hasPosts) {
+    posts = posts.slice(0, amount);
+}
 ---
 <ul>
     {   hasPosts 
         ?
-        posts.slice(0, 3).map(post => (
+        posts.map(post => (
             <article>
                 {post.frontmatter.title}
             </article>
